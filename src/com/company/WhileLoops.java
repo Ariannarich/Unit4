@@ -10,7 +10,7 @@ public class WhileLoops {
             return "invalid input.";
         else {
             while (num1 < num2) {
-                System.out.println(num1 + " ");
+                System.out.print(num1 + " ");
                 num1++;
 
             }
@@ -29,25 +29,28 @@ public static String Factor( int y)
     }
     return String.valueOf(x);
 }
-    public static String countPosAndNeg()
-    {
+    public static String countPosAndNeg() {
+        System.out.println("Enter a positive or negative number or 0 to quit: ");
         int num = input.nextInt();
-while(num != 0) {
-    return ("Enter a positive or negative number or 0 to quit: ");
-    input.nextInt();
-}
-if (num > 0)
-    return "There were " +num +"positive numbers";
-    }
+        while (num != 0) {
+            System.out.println("Enter a positive or negative number or 0 to quit:");
+            num = input.nextInt();
+        }
+            int pos=0;
+            int neg=0;
+            if (num > 0) {
+                pos++;
+                return "There were " + pos + "positive numbers";
+            }
+          if (num !=0 || num < 0)
+            {
+                neg++;
+                return "There were " + neg + "negative numbers";
+            }
+        }
+
     public static void main(String[] args) {
 
-        System.out.println("First number:");
-        int num1= input.nextInt();
-        System.out.println("Second number:");
-        int num2= input.nextInt();
-        System.out.println("Number to be factored:");
-       int y = input.nextInt();
-        System.out.println(FromHeretoThere(num1,num2));
-        System.out.println(Factor(y));
+        System.out.println(countPosAndNeg());
     }
 }
