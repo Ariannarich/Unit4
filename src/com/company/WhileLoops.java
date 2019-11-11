@@ -47,7 +47,7 @@ public static String Factor( int y)
                 neg++;
                 return "There were " + neg + "negative numbers";
             }
-        }
+         }
 
     public static void main(String[] args) {
 
