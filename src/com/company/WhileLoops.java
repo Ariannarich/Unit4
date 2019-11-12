@@ -32,22 +32,19 @@ public static String Factor( int y)
     public static String countPosAndNeg() {
         System.out.println("Enter a positive or negative number or 0 to quit: ");
         int num = input.nextInt();
+        int pos = 0;
+        int neg = 0;
         while (num != 0) {
-            System.out.println("Enter a positive or negative number or 0 to quit:");
-            num = input.nextInt();
-        }
-            int pos=0;
-            int neg=0;
-            if (num > 0) {
+         if (num >= 1)
                 pos++;
-                return "There were " + pos + "positive numbers";
+              else if (num <= -1)
+                    neg++;
+              System.out.println("Enter a positive or negative number or 0 to quit:");
+            num = input.nextInt();
             }
-          if (num !=0 || num < 0)
-            {
-                neg++;
-                return "There were " + neg + "negative numbers";
-            }
-         }
+
+        return  "There were " + neg + " negative and " + pos + " positive numbers";
+        }
 
     public static void main(String[] args) {
 
