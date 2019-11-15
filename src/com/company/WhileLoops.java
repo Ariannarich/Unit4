@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class      WhileLoops {
     static Scanner input = new Scanner(System.in);
 
-    public static String FromHeretoThere(int num1, int num2) {
+    public static String fromHereToThere(int num1, int num2) {
         if (num1 > num2)
             return "invalid input.";
         else {
@@ -19,7 +19,7 @@ public class      WhileLoops {
     }
 
 
-    public static String Factor(int y) {
+    public static String factors(int y) {
         int x = 1;
         while (x < y) {
             if (y % x == 0)
@@ -61,42 +61,44 @@ public class      WhileLoops {
             max = num2;
         if ( num2 < max )
             min = num2;
-        return "max is:  " + max + "" +
+        return "max is:  " + max +
                 "min is:  " + min;
 
     }
-    public static  String gradePoint()
+    public static double gradePoint()
     {
         double gpa =0;
     System.out.println("Enter seven letter grades(A,B,C,D,E,F)");
 String letter;
 int count = 0;
-while (count <= 7) {
+while (count < 7) {
     letter = input.next();
 
-    if (letter.equals("A")) {
+    if (letter.equals("A"))
         gpa = 4.0;
-    }
-    else if (letter.equals("B")){
-        gpa = 3.0;}
-    else if (letter.equals("C")){
-        gpa = 2.0;}
-    else if (letter.equals("D")){
-        gpa = 1.0;}
-    else if (letter.equals("F")){
-        gpa = 0.0;}
-gpa += gpa;
+    else if (letter.equals("B"))
+        gpa = 3.0;
+    else if (letter.equals("C"))
+        gpa = 2.0;
+    else if (letter.equals("D"))
+        gpa = 1.0;
+    else if (letter.equals("F"))
+        gpa = 0.0;
+    if(count >0)
+      double grade = 0;
+         gpa+=gpa;
     count++;
 }
-double avg = gpa /7;
 
 
-
-        return "GPA = "+ avg;
+        return gpa /7;
     }
     public static void main(String[] args) {
 
         System.out.println(gradePoint());
+        System.out.println(findMinAndMax());
+
+
 
     }
 }
