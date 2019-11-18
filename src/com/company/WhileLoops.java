@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class  WhileLoops {
     static Scanner input = new Scanner(System.in);
 
-    public static String FromHeretoThere(int num1, int num2) {
+    public static String fromHereToThere(int num1, int num2) {
         if (num1 > num2)
             return "invalid input.";
         else {
@@ -19,7 +19,7 @@ public class  WhileLoops {
     }
 
 
-    public static String Factor(int y) {
+    public static String factors(int y) {
         int x = 1;
         while (x < y) {
             if (y % x == 0)
@@ -61,12 +61,11 @@ public class  WhileLoops {
             max = num2;
         if ( num2 < max )
             min = num2;
-        return "max is:  " + max + "" +
-                "min is:  " + min;
+        return "max is:  " + max + " \n min is:  " + min;
 
     }
-    public static  String gradePoint() {
-        double avg=0;
+    public static double gradePoint() {
+        double avg;
         double gpa = 0;
         System.out.println("Enter seven letter grades(A,B,C,D,E,F)");
         String letter;
@@ -92,16 +91,18 @@ public class  WhileLoops {
             }
             count++;
         }
-        gpa *= 100;
+
         gpa/=7;
+        gpa *= 100;
         gpa = (int)gpa;
       avg = gpa/100;
-
-        return "GPA is: " + avg;
+        System.out.println("GPA is:" +avg);
+        return avg;
     }
     public static void main(String[] args) {
 
         System.out.println(gradePoint());
+    ;
 
     }
 }
