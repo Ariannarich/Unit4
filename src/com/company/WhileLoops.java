@@ -2,7 +2,7 @@ package com.company;
 
 import java.util.Scanner;
 
-public class      WhileLoops {
+public class  WhileLoops {
     static Scanner input = new Scanner(System.in);
 
     public static String FromHeretoThere(int num1, int num2) {
@@ -65,34 +65,39 @@ public class      WhileLoops {
                 "min is:  " + min;
 
     }
-    public static  String gradePoint()
-    {
-        double gpa =0;
-    System.out.println("Enter seven letter grades(A,B,C,D,E,F)");
-String letter;
-int count = 0;
-while (count <= 7) {
-    letter = input.next();
+    public static  String gradePoint() {
+        double avg=0;
+        double gpa = 0;
+        System.out.println("Enter seven letter grades(A,B,C,D,E,F)");
+        String letter;
+        int count = 0;
+        double grade = 1;
+        int i = 1;
+        while (count <= 7) {
+            while (i <= count) {
+            letter = input.next();
+                if (letter.equals("A")) {
+                    grade = 4.0;
+                } else if (letter.equals("B")) {
+                    grade = 3.0;
+                } else if (letter.equals("C")) {
+                    grade = 2.0;
+                } else if (letter.equals("D")) {
+                    grade = 1.0;
+                } else if (letter.equals("F")) {
+                    grade = 0.0;
+                }
+                 gpa += grade;
+                i++;
+            }
+            count++;
+        }
+        gpa *= 100;
+        gpa/=7;
+        gpa = (int)gpa;
+      avg = gpa/100;
 
-    if (letter.equals("A")) {
-        gpa = 4.0;
-    }
-    else if (letter.equals("B")){
-        gpa = 3.0;}
-    else if (letter.equals("C")){
-        gpa = 2.0;}
-    else if (letter.equals("D")){
-        gpa = 1.0;}
-    else if (letter.equals("F")){
-        gpa = 0.0;}
-gpa += gpa;
-    count++;
-}
-double avg = gpa /7;
-
-
-
-        return "GPA = "+ avg;
+        return "GPA is: " + avg;
     }
     public static void main(String[] args) {
 
