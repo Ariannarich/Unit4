@@ -6,30 +6,34 @@ public class  WhileLoops {
     static Scanner input = new Scanner(System.in);
 
     public static String fromHereToThere(int num1, int num2) {
+        String str = "";
         if (num1 > num2)
-            return "invalid input.";
+            return "Invalid input";
         else {
             while (num1 < num2) {
-                System.out.print(num1 + " ");
+         str += num1 + " ";
                 num1++;
 
             }
-            return String.valueOf(num1);
+            return str;
         }
     }
 
 
     public static String factors(int y) {
+
+String str = "";
         int x = 1;
-        while (x < y) {
+        while (x <= y) {
             if (y % x == 0)
-                return (x + " ");
+        str += x + " ";
             x++;
         }
-        return String.valueOf(x);
+return ("The factors of " + y + " are: "+ str);
     }
 
-    public static String countPosAndNeg() {
+    public static String countPosAndNeg()
+    {
 
         int num = input.nextInt();
         int pos = 0;
@@ -43,25 +47,26 @@ public class  WhileLoops {
             num = input.nextInt();
         }
 
-        return "There were " + neg + " negative and " + pos + " positive numbers";
+        return "There were " + pos + " positive and " + neg + " negative numbers.";
     }
 
     public static String findMinAndMax() {
         int max= Integer.MIN_VALUE;
         int min= Integer.MAX_VALUE;
         int num = 1;
-        int num2 = input.nextInt();
-        while (num <= 4) {
+        int num2;
+        while (num <= 5) {
             System.out.println("Enter number: ");
             num2 = input.nextInt();
             num++;
-        }
 
-        if ( num2 > max )
-            max = num2;
-        if ( num2 < max )
-            min = num2;
-        return "max is:  " + max + " \n min is:  " + min;
+
+            if (num2 > max)
+                max = num2;
+            if (num2 < min)
+                min = num2;
+        }
+        return "Max value is: " + max + "\nMin value is: " + min;
 
     }
     public static double gradePoint() {
@@ -96,12 +101,13 @@ public class  WhileLoops {
         gpa *= 100;
         gpa = (int)gpa;
       avg = gpa/100;
-        System.out.println("GPA is:" +avg);
+        System.out.println("GPA is :" +avg);
         return avg;
     }
     public static void main(String[] args) {
 
-        System.out.println(gradePoint());
+        System.out.println(factors(12));
+
     ;
 
     }
