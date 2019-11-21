@@ -15,27 +15,30 @@ public class Piglet {
         int points = 0;
         int num = (int) (Math.random() * 6 + 1);
         String yOrN;
+        String str = "";
         if (num != 1) {
-
             System.out.println("You rolled a " + num);
+            points += num;
             System.out.println("Roll again?");
             yOrN = input.nextLine();
+
             if (yOrN.equals("yes"))
                 while (yOrN.equals("yes")) {
+                    num = (int) (Math.random() * 6 + 1);
                     System.out.println("You rolled a " + num);
-                    points += num;
+                points += num;
                     System.out.println("Roll again?");
                     yOrN = input.nextLine();
                 }
-            else if (yOrN.equals("no")) {
-                return ("You got " + points + " points!");
+             if (yOrN.equals("no")) {
+               str += ("You got " + points + " points!");
             }
             num = (int) (Math.random() * 6 + 1);
         }
-        else {
-                return "You rolled a 1; you got 0 points.";
-        }
-return"play again";
+        else if (num == 1)
+            str +=  "You rolled a 1; you got 0 points.";
+
+return str;
 
     }
 }
