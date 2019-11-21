@@ -1,3 +1,5 @@
+package com.company;
+
 import com.company.StringProblems;
 import org.junit.Test;
 

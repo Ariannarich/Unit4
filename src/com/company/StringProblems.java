@@ -16,8 +16,10 @@ return str;
 
         while (count < s.length())
         {
-            if (count % 2 == 0 && count == 0)
+            if (count % 2 == 0 || count == 0)
+            {
                 str += s.substring(count, count+ 1);
+            count++;}
             else
                 count++;
         }
@@ -25,19 +27,36 @@ return str;
     }
     public static int countTheVowels(String s)
     {
-        String vowels = "aeiou";
+    int vowels=0;
         int count=1;
-        int count2=0;
         int num= 0;
+
         while ( count < s.length())
         {
-        if (s.charAt(count) == vowels.charAt(count2))
-        {
-            num++;
-            count2++;
-        }
-        else
-            count++;
+
+            if ('a'== (s.charAt(count)) || 'A'== (s.charAt(count))) {
+                num++;
+                count++;
+            }
+            else if ('e'== (s.charAt(count)) || 'E'== (s.charAt(count))) {
+                num++;
+                count++;
+            }
+            else if ('i'== (s.charAt(count)) || 'I'== (s.charAt(count))) {
+                num++;
+                count++;
+            }
+            else if ('o' == (s.charAt(count)) || 'O' ==(s.charAt(count))) {
+                num++;
+                count++;
+            }
+            else if ('u'== (s.charAt(count)) || 'U' == (s.charAt(count))) {
+                num++;
+                count++;
+            }
+            else
+                count++;
+
     }
         return num;
     }
