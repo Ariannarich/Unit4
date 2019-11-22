@@ -108,7 +108,7 @@ return ("The factors of " + y + " are: "+ str);
 
         System.out.println(factors(12));
 
-    ;
+
 
     }
 }
