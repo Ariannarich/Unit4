@@ -1,3 +1,5 @@
+package com.company;
+
 import java.util.Scanner;
 
 public class FizzBuzz {
@@ -9,7 +11,7 @@ public class FizzBuzz {
                 if(y % 20 ==0) {
 
                     if (y % 5 == 0 && y % 3 == 0) {
-                        blank += "FizzBuzz ";
+                        blank += "com.company.FizzBuzz ";
                         blank += "\n";
                     }
                     else if (y % 3 == 0) {
@@ -28,7 +30,7 @@ public class FizzBuzz {
                 }
             else {
                     if (y % 5 == 0 && y % 3 == 0)
-                        blank += "FizzBuzz ";
+                        blank += "com.company.FizzBuzz ";
                     else if (y % 3 == 0)
                         blank += "Fizz ";
                     else if (y % 5 == 0)
